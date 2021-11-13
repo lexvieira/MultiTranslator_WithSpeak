@@ -1,5 +1,5 @@
 from flask import Flask, request
-from pyTranslateMulti import translate
+from app.pyTranslateMulti import translate
 from flask_cors import CORS
 
 app = Flask(__name__)

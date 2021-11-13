@@ -1,12 +1,12 @@
 #Using Google Translator to Translate words and sentences.
-from google_trans_new.google_trans_new import google_translator  
+from app.google_trans_new.google_trans_new import google_translator  
 import gtts
 import base64
 import librosa
 def translate(text):
     if text != "":
         to_translate = text
-        print(text)
+        # print(text)
         
         translations = []    
         # translations["text"] = text
@@ -21,9 +21,9 @@ def translate(text):
         language_to_translate = { language[0] : language[1] }
         filename = "translation_lang.mp3"
         for k, l in lang_list.items():
-            print("{} - {}".format(k,l))
+            # print("{} - {}".format(k,l))
             translate_text = translator.translate(to_translate,lang_src='auto',lang_tgt=k)  
-            print("{} - {}".format(l,translate_text))
+            # print("{} - {}".format(l,translate_text))
             
             tts = gtts.gTTS(translate_text, lang=k) 
             tts.save(filename.replace("_lang","_" + k))
@@ -38,7 +38,7 @@ def translate(text):
             # return basereturn
             translations.append({"lang_code": k,"language": l, "translation": translate_text, "audio": "data:audio/mp3;base64," + str(base64encode) })
 
-        print(translations)
+        # print(translations)
         
         # basereturn =  base64.b64encode(tts.audio_content).decode()
         
