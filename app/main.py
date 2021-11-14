@@ -1,6 +1,7 @@
 from flask import Flask, request
 from app.pyTranslateMulti import translate
 from flask_cors import CORS
+from flask import render_template
 
 app = Flask(__name__)
 
@@ -8,7 +9,7 @@ CORS(app) #
 
 @app.route('/')
 def hello_world():
-    return '<h1>Jardel, Cuzão, Servidor Python rodando!!! kkkkkk</h1>'
+    return render_template("index.html")
 
 @app.route('/translator')
 def translator():
