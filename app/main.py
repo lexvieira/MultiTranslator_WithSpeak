@@ -9,7 +9,7 @@ CORS(app) #
 
 @app.route('/')
 def hello_world():
-    return render_template("html/index.html")
+    return render_template("index.html")
 
 @app.route('/translator')
 def translator():
