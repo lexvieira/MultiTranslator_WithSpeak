@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 flask = "*"
 gunicorn = "*"
+gtts = "*"
+librosa = "*"
+urllib3 = "*"
+requests = "*"
 
 [dev-packages]
 
