@@ -23,9 +23,9 @@
 
 		<hr>
 		<div>
-			<label for="basic-url" class="form-label" style="font-weight: bold;">Type Any Text to Translate</label>
+			<label for="basic-url" class="form-label" style="font-weight: bold;">Type any text to in any language 🇧🇷🇹🇭🇪🇸🇦🇷🇫🇷🇵🇱🇮🇹... and much more ;)</label>
 			<div class="input-group mb-4">
-				<input type="text" id="Input" placeholder="Type Any Text and Translate" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+				<input type="text" id="textToTranslate" placeholder="Type any text to in any language" class="form-control" aria-label="textToTranslate" aria-describedby="text-to-translate">
 				<button type="button" id="Button" class="btn btn-primary">Translate</button>			
 			</div>	
 		</div>
@@ -94,7 +94,7 @@
 				$("#Button").on('click', function () {
 					$('#detalhesTraducao').hide();
 					$('#Loading').fadeIn('slow');
-					var text = $("#Input").val();
+					var text = $("#textToTranslate").val();
 					//var url = 'http://127.0.0.1:5000/translator?text='+text;
 					var url = 'https://pymultitranslator.herokuapp.com/translator?text='+text;
 					$.get(url, function(data) {
