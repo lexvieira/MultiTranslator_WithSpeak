@@ -2,7 +2,6 @@
 from app.google_trans_new.google_trans_new import google_translator  
 import gtts
 import base64
-import librosa
 def translate(text):
     if text != "":
         to_translate = text
@@ -15,7 +14,6 @@ def translate(text):
         
         lang_list = {"en": "English","pt-br":"Portuguese BR","th": "Thai", "es": "Spanish", "fr": "French", "pl": "Polish"}
         language = translator.detect(to_translate)
-        
         
         #CreateTokenforTheAudioFile
         language_to_translate = { language[0] : language[1] }
