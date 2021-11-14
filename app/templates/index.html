@@ -9,9 +9,9 @@
 	  <div class="container">	  
 		<div>
 			<a href="/" style="text-decoration: none;">
-				<img style="width: 15%;" id="imgLogo" src="" alt="I Learn By Myself" />
+				<img style="width: 10%;" id="imgLogo" src="" alt="I Learn By Myself" />
 			</a>
-			<span style="color: #3c78d8;font-size: xx-large;">
+			<span style="color: #3c78d8;font-size: x-large;">
 				 Multi Translator (v1)
 				<span style="color:#6aa84f">
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-soundwave" viewBox="0 0 16 16">
@@ -20,22 +20,7 @@
 				</span>					 
 			</span>
 		</div>
-		<hr>		
-		<div>
-			<div class="alert alert-primary alert-dismissible" role="alert">
-				<div>
-					<br>English (en) - Type the text that you want to translate, listen it in many languages. Listen and control the speed.</br>
-					<br>Portuguese - Digite o texto que você deseja traduzir, ouça em muitos idiomas. Ouça e controle a velocidade.</br>
-					<br>Thai (th)	- 	พิมพ์ข้อความที่คุณต้องการแปลฟังในหลายภาษา ฟังและควบคุมความเร็ว</br>
-					<br>Spanish (es) - Escriba el texto que desea traducir, escúchelo en muchos idiomas. Escucha y controla la velocidad.</br>
-					<br>French (fr)- Tapez le texte que vous souhaitez traduire, écouter dans de nombreuses langues. Écoutez et contrôlez la vitesse.	
-</br>
-					<br>Polish (pl) - Wpisz tekst, który chcesz przetłumaczyć, słuchać go w wielu językach. Słuchaj i kontroluj prędkość.</br>
-					<br>Italian (it) - Digita il testo che vuoi tradurre, ascoltarlo in molte lingue. Ascolta e controlla la velocità.</br>					
-				</div>
-				<button type="button" class="btn-close float-right" data-bs-dismiss="alert" aria-label="Close"></button>			
-			</div>
-		</div>
+
 		<hr>
 		<div>
 			<label for="basic-url" class="form-label" style="font-weight: bold;">Type Any Text to Translate</label>
@@ -43,7 +28,6 @@
 				<input type="text" id="Input" placeholder="Type Any Text and Translate" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
 				<button type="button" id="Button" class="btn btn-primary">Translate</button>			
 			</div>	
-
 		</div>
 		<div id="Loading" style="display:none; color: #6aa84f">
 			<span>
@@ -56,8 +40,9 @@
 		<hr>
 		</div>
 		<div id="dvTranslations" style="display:none">
-			<table id="tbTranslations" style="border: 1px" class="responsive">
-			<thead style="border: 1px">
+			<table id="tbTranslations" style="border: 1px" class="table-responsive table caption-top">
+			<caption>Translations and Audio</caption>	
+			<thead style="color: #a64d79;font-size: larger;font-weight: bold;">
 				<tr>
 					<td>
 						Language
@@ -73,6 +58,21 @@
 			<tbody id="tbodyTranslation" style="border: 1px">
 			</tbody>
 			</table>
+		</div>
+		<hr>		
+		<div>
+			<div id="dvInitialInfo" style="display: block;" class="alert alert-primary alert-dismissible" role="alert">
+				<div>
+					<br>English (en) - Type the text that you want to translate, listen it in many languages. Listen and control the speed.</br>
+					<br>Portuguese - Digite o texto que você deseja traduzir, ouça em muitos idiomas. Ouça e controle a velocidade.</br>
+					<br>Thai (th)	- 	พิมพ์ข้อความที่คุณต้องการแปลฟังในหลายภาษา ฟังและควบคุมความเร็ว</br>
+					<br>Spanish (es) - Escriba el texto que desea traducir, escúchelo en muchos idiomas. Escucha y controla la velocidad.</br>
+					<br>French (fr)- Tapez le texte que vous souhaitez traduire, écouter dans de nombreuses langues. Écoutez et contrôlez la vitesse.</br>
+					<br>Polish (pl) - Wpisz tekst, który chcesz przetłumaczyć, słuchać go w wielu językach. Słuchaj i kontroluj prędkość.</br>
+					<br>Italian (it) - Digita il testo che vuoi tradurre, ascoltarlo in molte lingue. Ascolta e controlla la velocità.</br>					
+				</div>
+				<button type="button" class="btn-close float-right" data-bs-dismiss="alert" aria-label="Close"></button>			
+			</div>
 		</div>
 		<div id='dvhelpplayer' class="alert alert-warning alert-dismissible" role="alert">
 			<div>
