@@ -29,7 +29,7 @@
 				<button type="button" id="Button" class="btn btn-primary">Translate</button>			
 			</div>	
 		</div>
-		<div id="Loading" style="display:none; color: #6aa84f">
+		<div id="Loading" style="display:none; color: #6aa84f;font-size: larger;font-weight: bold;">
 			<span>
 				Loading...
 			</span>
@@ -115,6 +115,7 @@
 						$("#tbodyTranslation").html(htmlTable);
 						$("#dvTranslations").attr("style","display:block");		
 						$('#Loading').fadeOut('slow');
+						$('#dvInitialInfo').fadeOut('slow');
 					});
 				});
 				
