@@ -10,6 +10,7 @@ gtts = "*"
 librosa = "*"
 urllib3 = "*"
 requests = "*"
+flask-cors = "*"
 
 [dev-packages]
 
