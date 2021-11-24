@@ -1,5 +1,5 @@
 #Using Google Translator to Translate words and sentences.
-from googletrans import Translator  
+from googletrans import Translator, LANGUAGES
 import gtts
 import base64
 def translate(text):
@@ -8,26 +8,27 @@ def translate(text):
             'translate.google.com'
         ])
         
+        LANGUAGES_TRANSLATE = dict(LANGUAGES)
+
         to_translate = text
         # print(text)
         
         translations = []    
         
-        lang_list = {"en": "English","pt-br":"Portuguese BR","th": "Thai", "es": "Spanish", "fr": "French", "pl": "Polish", "it": "Italian"}
+        lang_list = {"en": "English","pt":"Portuguese BR","th": "Thai", "es": "Spanish", "fr": "French", "pl": "Polish", "it": "Italian"}
         language = translator.detect(to_translate)
         
         #CreateTokenforTheAudioFile
-        language_to_translate = { language[0] : language[1] }
+        language_to_translate = { language.lang : LANGUAGES_TRANSLATE[language.lang] }
         filename = "translation_lang.mp3"
         for k, l in lang_list.items():
             lang_dest = k
             lang_src = "auto"
-            a = translator.translate(to_translate, dest=lang_dest, src = lang_src)            
             
-            print("text: {}, translate: {}, pronunciation: {}".format(text, a.text, a.pronunciation))
-            translation_return = translator.translate(to_translate,lang_src='auto',lang_tgt=k)  
+            # print("\n{}{}{}\n".format(lang_dest, lang_src, language_to_translate))            
+            translation_return = translator.translate(to_translate, dest=lang_dest, src = lang_src)
             
-            translation_text = "{}".format(a.text) 
+            translation_text = "{}".format(translation_return.text) 
             p = translation_return.pronunciation
             
             tts = gtts.gTTS(translation_text, lang=k) 
