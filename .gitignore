@@ -5,6 +5,8 @@ __pycache__/app.cpython-36.pyc
 __pycache__/app.cpython-38.pyc
 __pycache__/app.cpython-39.pyc
 __pycache__/pyTranslateMulti.cpython-39.pyc
+app/google_trans_new/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -10,6 +10,7 @@ gtts = "*"
 urllib3 = "*"
 requests = "*"
 flask-cors = "*"
+googletrans = "==4.0.0-rc1"
 
 [dev-packages]
 
