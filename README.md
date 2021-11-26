@@ -1,4 +1,5 @@
-# MultiTranslator_WithSpeak
+# Multitranslation using the Google Translation API,PyDictionary <a href="https://colab.research.google.com/github/lexvieira/MultiTranslator_WithSpeak/blob/main/MultiTranslator_WithSpeak.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> 
+
 Multi Translator for learners of many languages, being possible to identify the language that you want to translate and translate it in at least 7 languages for now, include English. Languages Available:  English, Portuguese, Thai, Spanish, French, Polish, Italian
 
 Comming Soon
@@ -16,4 +17,4 @@ Translation for text with context using Cloud Translation API will be available 
 
 google-cloud-translate = "==2.0.1"
 
-Improvements, mobile app and controllers with functions more organized
+Improvements, mobile app and controllers with functions and more organized. Working hard to add more functions.
