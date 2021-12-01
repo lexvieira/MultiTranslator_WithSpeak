@@ -17,6 +17,10 @@
 			table {
 				min-width: 500px;
 			}
+
+			#divLogo {
+				width: auto;
+			}
 		}
 
 		.title {
@@ -29,11 +33,11 @@
 <body>
 	<div class="container">
 		<div class="row align-items-center">
-			<div style="padding:0;" class="col-1 order-1">
+			<div style="padding:0;" id="divLogo" class="col-1 col-2 order-1">
 				<img src="{{ url_for('static', filename='img/logo-144x144.png') }}" class="img-fluid"
 					alt="I Learn By Myself" />
 			</div>
-			<div class="col-11 order-2">
+			<div class="col order-2">
 				<h4 class="title">
 					<span style="color: #3c78d8;font-size: x-large;">
 						Multi Translator (v1)
@@ -62,8 +66,8 @@
 					class="bi bi-emoji-wink"></span></label>
 			<div class="input-group">
 				<input type="text" id="textToTranslate"
-					placeholder="Type any text to in any language and press Enter or Click to translate" on
-					class="form-control" aria-label="textToTranslate" aria-describedby="text-to-translate">
+					placeholder="Type any text in any language and press Enter or Click to translate or use your microphone to speak"
+					on class="form-control" aria-label="textToTranslate" aria-describedby="text-to-translate">
 				<button type="button" id="btnTranslate" class="btn btn-primary">Translate</button>
 			</div>
 
@@ -89,7 +93,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<div class="container">
@@ -110,7 +113,8 @@
 			<div class="col">
 				<div id="dvTranslations" style="display:none" class="table-responsive">
 					<table id="tbTranslations" class="table caption-top table-striped" style="width: auto;">
-						<caption style="font-weight: bold; color: #cc0000;" id="capLanguage">Translations and Audio </caption>
+						<caption style="font-weight: bold; color: #cc0000;" id="capLanguage">Translations and Audio
+						</caption>
 						<thead style="color: #a64d79;font-size: larger;font-weight: bold;">
 							<tr>
 								<td>
@@ -128,12 +132,16 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="container">
 		<div class="row">
 			<div class="col">
 				<div id="dvInitialInfo" style="display: block;" class="alert alert-primary alert-dismissible"
 					role="alert">
+					<div class="embed-responsive embed-responsive-16by9">
+						<video width="100%" autoplay muted loop class="embed-responsive-item">
+							<source src="{{ url_for('static', filename='img/helptranslator.mp4') }}" type="video/mp4">
+						</video>
+					</div>
 					<div>
 						<p style="color: #a64d79;"><span style="font-weight: bold;">English (en)</span> - Type the text
 							that you want to translate, listen it in many languages. Listen and control the speed.</p>
@@ -174,11 +182,16 @@
 			<div class="col-12">
 				<div id='dvhelpplayer' class="alert alert-warning alert-dismissible" role="alert">
 					<div style="color: #a64d79;font-weight: bold;">
-						Use the player speed to control the speed of the audio, so you can improve your listening, and
+						1) Use the player speed to control the speed of the audio, so you can improve your listening,
+						and
 						practice your speaking.
 						<br>
-						<img src="{{ url_for('static', filename='img/playerhelpspeed.png') }}"
-							alt="Help Audio Player" />
+						<img src="{{ url_for('static', filename='img/playerhelp1.png') }}" alt="Help Audio Player" />
+					</div>
+					<div style="color: #a64d79;font-weight: bold;">
+						2) Select the speed that you want to practice.
+						<br>
+						<img src="{{ url_for('static', filename='img/playerhelp2.png') }}" alt="Help Audio Player" />
 					</div>
 					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 				</div>
@@ -206,10 +219,10 @@
 
 		function translateText() {
 			var text = $("#textToTranslate").val();
-			if (text){
-				$("#alertDiv").fadeOut();				
+			if (text) {
+				$("#alertDiv").fadeOut();
 				$('#detalhesTraducao').hide();
-				$('#Loading').fadeIn('slow');				
+				$('#Loading').fadeIn('slow');
 				var url = '/translator?text=' + text;
 				$.get(url, function (data) {
 					$('#detalhesTraducao').fadeOut();
@@ -233,8 +246,8 @@
 					$('#dvInitialInfo').fadeOut('slow');
 					$("#textToTranslate").val("");
 
-				});				
-			}else{
+				});
+			} else {
 				$("#alertDiv").removeClass("d-none").fadeIn();
 				$("#alertMessage").html("Type some Text to Translate");
 			}
