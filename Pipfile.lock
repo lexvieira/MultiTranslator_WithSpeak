@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c32677fb69614eec30aec926fb89e4336053704adbdd367d2bda93ed278e78db"
+            "sha256": "60793eb6ad3ec1c5ff98b488c8a0266f4f0403ce4106242e6b3b3b020aa71f48"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.10.6"
+            "python_version": "3.9"
         },
         "sources": [
             {
@@ -21,7 +21,7 @@
                 "sha256:35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3",
                 "sha256:4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"
             ],
-            "markers": "python_full_version >= '3.6.0'",
+            "markers": "python_version >= '3.6'",
             "version": "==2022.12.7"
         },
         "chardet": {
@@ -36,7 +36,7 @@
                 "sha256:5a3d016c7c547f69d6f81fb0db9449ce888b418b5b9952cc5e6e66843e9dd845",
                 "sha256:83e9a75d1911279afd89352c68b45348559d1fc0506b054b346651b5e7fee29f"
             ],
-            "markers": "python_full_version >= '3.6.0'",
+            "markers": "python_version >= '3.6'",
             "version": "==2.1.1"
         },
         "click": {
@@ -112,7 +112,7 @@
                 "sha256:a5af19757616bd31c5f6772e3ae0826c67cca35580d0c3243c15824aa2756073",
                 "sha256:b2df7b64666b711a670894708c31558f84be9fd8da5e2d4cc40927faaf55792a"
             ],
-            "markers": "python_full_version >= '3.6.0'",
+            "markers": "python_version >= '3.6'",
             "version": "==2022.12.1"
         },
         "httpcore": {
@@ -120,7 +120,7 @@
                 "sha256:9850fe97a166a794d7e920590d5ec49a05488884c9fc8b5dba8561effab0c2a0",
                 "sha256:ecc5949310d9dae4de64648a4ce529f86df1f232ce23dcfefe737c24d21dfbe9"
             ],
-            "markers": "python_full_version >= '3.6.0'",
+            "markers": "python_version >= '3.6'",
             "version": "==0.9.1"
         },
         "httpx": {
@@ -128,7 +128,7 @@
                 "sha256:32d930858eab677bc29a742aaa4f096de259f1c78c68a90ad11f5c3c04f08335",
                 "sha256:3642bd13e90b80ba8a243a730275eb10a4c26ec96f5fc16b87e458d4ab21efae"
             ],
-            "markers": "python_full_version >= '3.6.0'",
+            "markers": "python_version >= '3.6'",
             "version": "==0.13.3"
         },
         "hyperframe": {
