@@ -15,7 +15,7 @@ def translate(text):
         
         translations = []    
         
-        lang_list = {"en": "English","pt":"Portuguese BR","th": "Thai", "es": "Spanish", "fr": "French", "pl": "Polish", "it": "Italian"}
+        lang_list = {"en": "English","pt":"Portuguese BR","th": "Thai", "es": "Spanish", "fr": "French", "pl": "Polish", "it": "Italian", "nl": "Dutch"}
         language = translator.detect(to_translate)
         
         #CreateTokenforTheAudioFile
