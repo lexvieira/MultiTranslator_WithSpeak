@@ -27,33 +27,72 @@
 			padding: 0px;
 			margin: 0px;
 		}
+
+		.socialmedia a {
+			text-decoration: none;
+		}
+
 	</style>
 </head>
 
 <body>
-	<div class="container">
-		<div class="row align-items-center">
-			<div style="padding:0;" id="divLogo" class="col-1 col-2 order-1">
-				<img src="{{ url_for('static', filename='img/logo-144x144.png') }}" class="img-fluid"
-					alt="I Learn By Myself" />
+	<header>
+		<div class="container">
+			<div class="row align-items-center">
+				<div style="padding:0;" id="divLogo" class="col-1 col-2 order-1">
+					<img src="{{ url_for('static', filename='img/logo-144x144.png') }}" class="img-fluid"
+						alt="I Learn By Myself" />
+				</div>
+				<div class="col order-2">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<h4 class="title">
+									<span style="color: #3c78d8;font-size: x-large;">
+										Multi Translator (v1)
+										<span style="color:#6aa84f" class="bi bi-soundwave">
+										</span>
+									</span>
+								</h4>
+								<h6 class="title">
+									<span style="color: #6aa84f;">
+										<span class="bi bi-play-circle" aria-hidden="true"></span>
+										Listen, speak, practice, when you want, where you want!
+									</span>
+								</h6>								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">		
+							</div>
+						</div>
+						<div class="row">
+							<div class="col socialmedia">
+								<a class="link" href="https://www.youtube.com/@ilearnBMS" target="_blank" and rel="noopener noreferrer">
+									<span class="bi bi-youtube" aria-hidden="true"></span>								
+								</a>
+								<a href="https://www.facebook.com/ILearnBMS" target="_blank" and rel="noopener noreferrer">
+									<span class="bi bi-facebook" aria-hidden="true"></span>								
+								</a>		
+								<a href="https://www.instagram.com/ilearnbymyself/" target="_blank" and rel="noopener noreferrer">
+									<span class="bi bi-instagram" aria-hidden="true"></span>								
+								</a>																	
+							</div>
+						</div>
+					</div>
+
+				</div>
 			</div>
-			<div class="col order-2">
-				<h4 class="title">
-					<span style="color: #3c78d8;font-size: x-large;">
-						Multi Translator (v1)
-						<span style="color:#6aa84f" class="bi bi-soundwave">
+			<div class="row align-items-center d-none">
+				<div style="padding:0;" id="divLogo" class="col-1 col-2 order-1">
+						<span style="color: #6aa84f;">
+							Test
 						</span>
-					</span>
-				</h4>
-				<h6 class="title">
-					<span style="color: #6aa84f;">
-						<span class="bi bi-play-circle" aria-hidden="true"></span>
-						Listen, speak, practice, when you want, where you want!
-					</span>
-					</h5>
-			</div>
-		</div>
-	</div>
+				</div>
+			<div>
+		</div>		
+	</header>
+
 	<hr />
 
 	<div class="container">
@@ -138,7 +177,7 @@
 				<div id="dvInitialInfo" style="display: block;" class="alert alert-primary alert-dismissible"
 					role="alert">
 					<div class="embed-responsive embed-responsive-16by9">
-						<video width="100%" autoplay muted loop class="embed-responsive-item">
+						<video width="100%" autoplay muted loop class="embed-responsive-item rounded">
 							<source src="{{ url_for('static', filename='img/helptranslator.mp4') }}" type="video/mp4">
 						</video>
 					</div>
@@ -162,7 +201,7 @@
 						<p style="margin-bottom: 0px;">
 							<span style="color: #a64d79;font-weight: bold;">See the Code here:</span>
 							<a href="https://colab.research.google.com/github/lexvieira/MultiTranslator_WithSpeak/blob/main/MultiTranslator_WithSpeak.ipynb"
-								target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg"
+								target="_blank" ><img src="https://colab.research.google.com/assets/colab-badge.svg"
 									alt="Open In Colab" /></a> or on <a style="text-decoration: none;"
 								href="https://github.com/lexvieira/MultiTranslator_WithSpeak" target="_blank">Github
 								<span style="color: #000000;" class="bi bi-github"></span></a>
