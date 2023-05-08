@@ -1,4 +1,6 @@
 requirements.bck
+Pipfile
+Pipfile.lock
 *.mp3
 __pycache__/app.cpython-36.pyc
 __pycache__/app.cpython-38.pyc
@@ -138,4 +140,4 @@ dmypy.json
 .pyre/
 
 #Vscode Configuration
-.vscode 
+.vscode
